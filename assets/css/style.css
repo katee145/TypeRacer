@@ -1,0 +1,79 @@
+<style>@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+</style>
+
+/* Custom orange background */
+.bg-custom-orange {
+    background-color: #ff8400 !important;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Alegreya', serif;
+    color: #fff;
+}
+
+#header-button {
+    background: #fff;
+}
+
+#header {
+    background: #ff8400;
+}
+
+/* Custom colors */
+.bg-light-grey {
+    background-color: #d3d3d3;
+    /* Light grey color */
+}
+
+.bg-white {
+    background-color: #ffffff;
+    /* White color */
+}
+
+h5 {
+    margin: 0;
+    /* Ensure there is no extra space around the heading */
+}
+
+.instruction-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.big-text {
+    font-size: 1.5rem;
+    /* Larger font size for the main instruction */
+}
+
+.test-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Button styles */
+.btn-custom {
+    background-color: white;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    border: 2px solid #ff8400;
+    padding: 0.5rem 1rem;
+}
+
+.btn-custom:hover {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+/* Results box styles */
+.border-orange-shadow {
+    border: 2px solid #ff8400;
+    box-shadow: 0 0 10px rgba(255, 132, 0, 0.5);
+}
