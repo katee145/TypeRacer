@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         userInput.disabled = false;
         userInput.value = ''; // Clear the text area
         userInput.focus(); // Focus on the text area
+        userInput.addEventListener('input', updateTypingFeedback);
     }
 
     function stopTest() {
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.btn-start').disabled = false;
         const userInput = document.querySelector('.form-control');
         userInput.disabled = true;
+        userInput.removeEventListener('input', updateTypingFeedback);
         const wpm = calculateWPM(userInput.value, timeTaken);
         displayResults(timeTaken, wpm);
     }
@@ -83,6 +85,27 @@ document.addEventListener('DOMContentLoaded', function () {
         const difficultyElement = document.querySelector('.results-difficulty');
         const difficulty = document.querySelector('.form-select').value;
         difficultyElement.textContent = `Level: ${difficulty}`;
+    }
+
+    function updateTypingFeedback() {
+        const sampleText = document.querySelector('.test-text').textContent;
+        const userInput = document.querySelector('.form-control').value;
+        const sampleWords = sampleText.split(' ');
+        const userWords = userInput.split(' ');
+
+        let feedbackHTML = '';
+
+        for (let i = 0; i < sampleWords.length; i++) {
+            if (userWords[i] === undefined) {
+                feedbackHTML += `<span>${sampleWords[i]}</span> `;
+            } else if (userWords[i] === sampleWords[i]) {
+                feedbackHTML += `<span style="color: blue;">${sampleWords[i]}</span> `;
+            } else {
+                feedbackHTML += `<span style="color: red;">${sampleWords[i]}</span> `;
+            }
+        }
+
+        document.querySelector('.test-text').innerHTML = feedbackHTML.trim();
     }
 
     document.querySelector('.btn-start').addEventListener('click', startTest);
