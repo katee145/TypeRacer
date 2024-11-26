@@ -48,18 +48,20 @@
                                 placeholder="Click the start button to begin the test" rows="3"></textarea> </div>
                     </div> <!-- Buttons -->
                     <div class="row mt-4">
-                        <div class="col-12 text-center"> <button class="btn btn-custom mx-1">Start</button> <button
-                                class="btn btn-custom mx-1">Stop</button> <button
-                                class="btn btn-custom mx-1">Retry</button> </div>
+                        <div class="col-12 text-center">
+                            <button class="btn btn-custom mx-1 btn-start">Start</button>
+                            <button class="btn btn-custom mx-1 btn-stop" disabled>Stop</button>
+                            <button class="btn btn-custom mx-1">Retry</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 order-md-1 mt-4 mt-md-0">
                     <!-- Results Box -->
                     <div class="p-3 border-orange-shadow text-center">
                         <h5>Results</h5>
-                        <p>Level: Easy</p>
-                        <p>Time: 0s</p>
-                        <p>WPM: 0</p>
+                        <p class="results-difficulty">Level: Easy</p>
+                        <p class="results-time">Time: 0.00s</p>
+                        <p class="results-wpm">WPM: 0</p>
                     </div>
                 </div>
             </div>
